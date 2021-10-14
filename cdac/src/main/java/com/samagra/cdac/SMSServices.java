@@ -1,3 +1,5 @@
+package com.samagra.cdac;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,6 +20,7 @@ import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.springframework.beans.factory.annotation.Value;
 
 
 /**
@@ -29,21 +32,6 @@ import org.apache.http.message.BasicNameValuePair;
  * @see <a href="https://mgov.gov.in/doc/RequiredJars.zip">Download required Jar files</a>
  */
 public class SMSServices {
-
-    public static void main(String[] args) {
-        String username = System.getenv("username");
-        String senderId = System.getenv("senderId");
-        String password = System.getenv("password");
-        String templateId = System.getenv("templateId");
-        String templateName = System.getenv("templateName");
-        String mobileNumber = System.getenv("mobileNumber");
-        String secureKey = System.getenv("secureKey");
-        String message = "नमस्कार! आपके विद्यालय के लिए ई-संवाद पंजीकरण हेतु एक अनुरोध जमा किया गया है। अनुरोध की समीक्षा करने के लिए कृपया {#var#} पर जाएं। समग्र शिक्षा, हिमाचल प्रदेश";
-        String finalmessage = SMSServices.convertUnicodeMessage(message);
-        String generatedKey = hashGenerator(username, senderId, finalmessage, secureKey);
-        System.out.println(generatedKey);
-        sendUnicodeSMS(username, password, message, senderId, mobileNumber, secureKey, templateId);
-    }
 
     /**
      * Send Single text SMS
