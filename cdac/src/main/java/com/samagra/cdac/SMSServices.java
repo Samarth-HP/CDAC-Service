@@ -21,6 +21,7 @@ import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 
 /**
@@ -31,6 +32,7 @@ import org.springframework.beans.factory.annotation.Value;
  * <br>Apache commons-logging-1.2
  * @see <a href="https://mgov.gov.in/doc/RequiredJars.zip">Download required Jar files</a>
  */
+@Component
 public class SMSServices {
 
     /**
