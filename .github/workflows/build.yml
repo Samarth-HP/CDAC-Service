@@ -33,4 +33,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Samagra-Development_CDAC-Service
+        run: |
+          echo "Adding dummy env variables"
+          export USERNAME=USERNAME
+          export SENDER_ID=SENDER_ID
+          export PASSWORD=PASSWORD
+          export TEMPLATE_ID=TEMPLATE_ID
+          export SECURE_KEY=SECURE_KEY
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Samagra-Development_CDAC-Service
