@@ -3,7 +3,7 @@ version: "3"
 services:
   inbound:
     container_name: cdac-service
-    image: "bla"
+    build: .
     restart: always
     environment:
       USERNAME: "${USERNAME}"
