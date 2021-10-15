@@ -1,3 +1,6 @@
+# Whitelisted Stuff
+!libs/
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -31,3 +34,22 @@ build/
 
 ### VS Code ###
 .vscode/
+
+**/target/
+/target/
+*/target/*
+.classpath
+.project
+.settings
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+##############################
+## OS X
+##############################
+.DS_Store
+
+
