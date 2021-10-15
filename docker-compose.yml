@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  inbound:
+    container_name: cdac-service
+    image: "bla"
+    restart: always
+    environment:
+      USERNAME: "${USERNAME}"
+      SENDER_ID: "${SENDER_ID}"
+      PASSWORD: "${PASSWORD}"
+      SECURE_KEY: "${SECURE_KEY}"
+    ports:
+      - "0.0.0.0:8081:8085"
