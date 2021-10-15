@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CdacApplication {
 
-    @Value("username") String username;
-    @Value("senderId") String senderId;
-    @Value("password") String password;
-    @Value("secureKey") String secureKey;
+    @Value("${username}") String username;
+    @Value("${senderId}") String senderId;
+    @Value("${password}") String password;
+    @Value("${secureKey}") String secureKey;
 
     @Autowired
     SMSService smsService;
