@@ -15,6 +15,8 @@
     <description>cdac</description>
     <properties>
         <java.version>1.8</java.version>
+        <sonar.organization>samagra-development</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <repositories>
         <repository>
