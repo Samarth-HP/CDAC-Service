@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.ws.Response;
-
 @SpringBootApplication
 @RestController
 public class CdacApplication {
@@ -22,7 +20,7 @@ public class CdacApplication {
     @Value("secureKey") String secureKey;
 
     @Autowired
-    SMSServices smsServices;
+    SMSService smsService;
 
     @GetMapping("/")
     ResponseEntity<String> test() {
@@ -32,7 +30,7 @@ public class CdacApplication {
     @GetMapping("/send_unicode_sms")
     ResponseEntity<String> sendUnicodeSms(@RequestParam String message, @RequestParam String mobileNumber, @RequestParam String templateid) {
         try {
-            String resp = smsServices.sendUnicodeSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
+            String resp = smsService.sendUnicodeSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
             return new ResponseEntity<>(resp, HttpStatus.OK);
         }catch (Exception e){
             System.out.println("Exception: " + e);
@@ -43,7 +41,7 @@ public class CdacApplication {
     @GetMapping("/send_bulk_sms")
     ResponseEntity<String> sendBulkSMS(@RequestParam String message, @RequestParam String mobileNumber, @RequestParam String templateid){
         try {
-            String resp = smsServices.sendBulkSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
+            String resp = smsService.sendBulkSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
             return new ResponseEntity<>(resp, HttpStatus.OK);
         }catch (Exception e){
             System.out.println("Exception: " + e);
@@ -54,7 +52,7 @@ public class CdacApplication {
     @GetMapping("/send_single_sms")
     ResponseEntity<String> sendSingleSms(@RequestParam String message, @RequestParam String mobileNumber, @RequestParam String templateid){
         try {
-            String resp = smsServices.sendSingleSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
+            String resp = smsService.sendSingleSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
             return new ResponseEntity<>(resp, HttpStatus.OK);
         }catch (Exception e){
             System.out.println("Exception: " + e);
@@ -65,7 +63,7 @@ public class CdacApplication {
     @GetMapping("/send_otp_sms")
     ResponseEntity<String> sendOtpSms(@RequestParam String message, @RequestParam String mobileNumber, @RequestParam String templateid) {
         try {
-            String resp = smsServices.sendOtpSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
+            String resp = smsService.sendOtpSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
             return new ResponseEntity<>(resp, HttpStatus.OK);
         }catch (Exception e){
             System.out.println("Exception: " + e);
@@ -76,7 +74,7 @@ public class CdacApplication {
     @GetMapping("/send_single_unicode_sms")
     ResponseEntity<String> sendUnicodeOtpSMS(@RequestParam String message, @RequestParam String mobileNumber, @RequestParam String templateid) {
         try {
-            String resp = smsServices.sendUnicodeOtpSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
+            String resp = smsService.sendUnicodeOtpSMS(username, password, message, senderId, mobileNumber, secureKey, templateid);
             return new ResponseEntity<>(resp, HttpStatus.OK);
         }catch (Exception e){
             System.out.println("Exception: " + e);

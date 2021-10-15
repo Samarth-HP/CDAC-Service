@@ -33,7 +33,7 @@ import org.springframework.stereotype.Component;
  * @see <a href="https://mgov.gov.in/doc/RequiredJars.zip">Download required Jar files</a>
  */
 @Component
-public class SMSServices {
+public class SMSService {
 
     /**
      * Send Single text SMS
