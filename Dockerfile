@@ -21,3 +21,6 @@ RUN ls -lR
 ARG JAR_FILE=target/*.jar
 COPY --from=build $HOME/target/*.jar app.jar
 
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
+
