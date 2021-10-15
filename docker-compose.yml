@@ -11,4 +11,4 @@ services:
       PASSWORD: "${PASSWORD}"
       SECURE_KEY: "${SECURE_KEY}"
     ports:
-      - "0.0.0.0:8081:8085"
+      - "0.0.0.0:8081:8080"
