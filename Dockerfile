@@ -1,22 +1,23 @@
-#
 # Build stage
-#
 FROM maven:3.6.0-jdk-11-slim AS build
-COPY src /home/app/src
-COPY pom.xml /home/app
-COPY libs /home/app/libs
-WORKDIR /home/app
-RUN ls -lR
-RUN mvn clean package
+ENV HOME=/home/app
+RUN mkdir -p $HOME
+WORKDIR $HOME
+ADD pom.xml $HOME
+ADD /libs $HOME/libs
+RUN mvn dependency:go-offline
 
-#
+ADD /src $HOME/src
+RUN ls -lR
+RUN mvn package -DskipTests=true
+
 # Package stage
-#
 FROM openjdk:11-jre-slim
-WORKDIR /home/app
+RUN apt update && apt upgrade
+RUN apt install curl -y
+ENV HOME=/home/app
+WORKDIR $HOME
+RUN ls -lR
 ARG JAR_FILE=target/*.jar
-RUN echo $JAR_FILE
-COPY ${JAR_FILE} app.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY --from=build $HOME/target/*.jar app.jar
 

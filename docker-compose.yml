@@ -1,10 +1,10 @@
 version: "3"
 
 services:
-  inbound:
-    container_name: cdac-service
+  cdac:
     build: .
     restart: always
+    command: "java -jar app.jar"
     environment:
       USERNAME: "${USERNAME}"
       SENDER_ID: "${SENDER_ID}"
@@ -12,3 +12,8 @@ services:
       SECURE_KEY: "${SECURE_KEY}"
     ports:
       - "0.0.0.0:8081:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://cdac:8080/api"]
+      interval: 2s
+      timeout: 5s
+      retries: 20
