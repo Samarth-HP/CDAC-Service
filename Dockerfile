@@ -8,7 +8,6 @@ ADD /libs $HOME/libs
 RUN mvn dependency:go-offline
 
 ADD /src $HOME/src
-RUN ls -lR
 RUN mvn package -DskipTests=true
 
 # Package stage
@@ -17,8 +16,6 @@ RUN apt update && apt upgrade
 RUN apt install curl -y
 ENV HOME=/home/app
 WORKDIR $HOME
-RUN ls -lR
-ARG JAR_FILE=target/*.jar
 COPY --from=build $HOME/target/*.jar app.jar
 
 EXPOSE 8080
