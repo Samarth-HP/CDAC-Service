@@ -6,7 +6,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Samagra-Development_CDAC-Service&metric=alert_status)](https://sonarcloud.io/dashboard?id=Samagra-Development_CDAC-Service)
 
 ## Clone the project:  
-- clone the github project to your local machine [CDAC-SERVICE](https://github.com/Samagra-Development/CDAC-Service.git) (`https://github.com/Samagra-Development/CDAC-Service.git`)
+- clone the github project [CDAC-SERVICE](https://github.com/Samagra-Development/CDAC-Service.git) to your local machine `https://github.com/Samagra-Development/CDAC-Service.git`
 
 ### Steps to run from Docker:  
 - rename `env.sample` file to `.env` and set the correct variable values
