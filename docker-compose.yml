@@ -10,7 +10,7 @@ services:
       PASSWORD: "${PASSWORD}"
       SECURE_KEY: "${SECURE_KEY}"
     ports:
-      - "127.0.0.1:8080:8080"
+      - "8080:8080"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://cdac:8080/api"]
       interval: 2s
