@@ -21,11 +21,6 @@ A Spring-Boot based microservice providing REST endpoints for using SMS services
 - [x] Send messages from CSV
 - [ ] Add audit logs
 
-## Use Case :rocket:
-
-![Screencast from 03-02-22 05_31_50 PM IST](https://user-images.githubusercontent.com/56133783/152341126-ac03baa3-258c-473a-956a-d0973682234a.gif)
-
-
 ## Requirements :scroll:
 
 1. Your machine should have [Python](https://www.python.org/downloads/) and ```pip``` installed.
