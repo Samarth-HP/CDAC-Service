@@ -1,21 +1,3 @@
-# CDAC-Service
-
-[![Build](https://github.com/Samagra-Development/CDAC-Service/actions/workflows/build.yml/badge.svg)](https://github.com/Samagra-Development/CDAC-Service/actions/workflows/build.yml)
-[![Docker Build](https://github.com/Samagra-Development/CDAC-Service/actions/workflows/docker.yml/badge.svg)](https://github.com/Samagra-Development/CDAC-Service/actions/workflows/docker.yml)
-[![Dockerhub Push](https://github.com/Samagra-Development/CDAC-Service/actions/workflows/docker-push.yml/badge.svg)](https://github.com/Samagra-Development/CDAC-Service/actions/workflows/docker-push.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Samagra-Development_CDAC-Service&metric=alert_status)](https://sonarcloud.io/dashboard?id=Samagra-Development_CDAC-Service)
-
-### Clone the project:  
-- clone the github project [CDAC-SERVICE](https://github.com/Samagra-Development/CDAC-Service.git) to your local machine `git clone https://github.com/Samagra-Development/CDAC-Service.git`
-
-### Steps to run from Docker:  
-- rename `env.sample` file to `.env` and set the correct variable values
-- build and run the container `docker-compose up -d`
-
-### API
-Start the server and go to http://localhost:8080/api/swagger-ui.html
------------------------
-
 <p align="center">
   <h1>CDAC-Service</h1>
 </p>
@@ -99,5 +81,5 @@ origin  https://github.com/Your_Username/CDAC-Service.git (push)
     docker-compose up -d
 ```
 
-### API
+### 5. API
     Start the server and go to http://localhost:8080/api/swagger-ui.html
