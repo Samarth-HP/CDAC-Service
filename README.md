@@ -82,4 +82,4 @@ origin  https://github.com/Your_Username/CDAC-Service.git (push)
 ```
 
 ### 5. API
-    Start the server and go to http://localhost:8080/api/swagger-ui.html
+Start the server and go to ```http://localhost:8080/api/swagger-ui.html```
