@@ -53,7 +53,6 @@ git clone https://github.com/Samagra-Development/CDAC-Service.git
 Once you have cloned the `CDAC-SERVICE` repository in GitHub, move to that folder first using the change directory command.
 
 ```sh
-# This will change directory to a folder FOSSologyUI
 cd CDAC-SERVICE
 ```
 
