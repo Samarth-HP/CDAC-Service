@@ -12,7 +12,7 @@ RUN mvn package -DskipTests=true
 
 # Package stage
 FROM openjdk:11-jre-slim
-RUN apt update && apt upgrade
+RUN apt update && apt -y upgrade
 RUN apt install curl -y
 ENV HOME=/home/app
 WORKDIR $HOME
