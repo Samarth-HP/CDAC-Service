@@ -17,7 +17,7 @@ RUN apt install curl -y
 ENV HOME=/home/app
 WORKDIR $HOME
 COPY --from=build $HOME/target/*.jar app.jar
+COPY ./start.sh .
 
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
-
+ENTRYPOINT ["bash","start.sh"]
