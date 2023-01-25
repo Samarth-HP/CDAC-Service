@@ -60,6 +60,15 @@ Move to this folder for all other commands.
 
 ### 3. Set it up :arrow_up:
 
+First, You need to add some hosts to your `/etc/hosts` file as mentioned [here](https://mgov.gov.in/PushSMS_Q1) on `mgov.gov.in` website.
+
+_Note: These ip addresses could subject to change so please make sure you are adding the correct ip addresses. You can use ping utility to identify the ip of a host._
+
+```
+164.100.129.128 mgov.gov.in
+164.100.129.141 msdgweb.mgov.gov.in
+```
+
 Run the following commands to see that _your local copy_ has a reference to _your forked remote repository_ in GitHub :octocat:
 
 ```sh
