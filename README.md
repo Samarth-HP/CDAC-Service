@@ -60,9 +60,9 @@ Move to this folder for all other commands.
 
 ### 3. Set it up :arrow_up:
 
-First, You need to add some hosts to your `/etc/hosts` file as mentioned [here](https://mgov.gov.in/PushSMS_Q1) on `mgov.gov.in` website.
+First, You need to add the required hosts to your `/etc/hosts` file as mentioned [here](https://mgov.gov.in/PushSMS_Q1) on `mgov.gov.in` website.
 
-_Note: These ip addresses could subject to change so please make sure you are adding the correct ip addresses. You can use ping utility to identify the ip of a host._
+_Note: These ip addresses are subject to change; so please ensure adding the correct ip addresses. You can use ping utility to identify the ip of a host on your local machine `ping msdgweb.mgov.gov.in`._
 
 ```
 164.100.129.128 mgov.gov.in
