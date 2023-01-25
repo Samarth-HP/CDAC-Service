@@ -5,6 +5,7 @@
 !/libs/**
 !/src/**
 !pom.xml
+!start.sh
 
 # Ignore unnecessary files inside allowed directories
 # This should go after the allowed directories
