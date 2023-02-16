@@ -28,7 +28,12 @@ node() {
 
     stage('docker-push') {
         sh '''
-                docker push $docker_server/$docker_repo:$commit_id
-                '''
+        docker push $docker_server/$docker_repo:$commit_id
+        '''
+        if (env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'master') {
+            sh '''
+            docker push $docker_server/$docker_repo:latest
+            '''
+        }
     }
 }
